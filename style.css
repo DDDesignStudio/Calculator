@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: 112.5px 112.5px 112.5px 112.5px;
+    grid-template-areas: 
+    "output output output output";
+    grid-template-rows: [row1-start] 25% [row1-end];
+    grid-column: 24;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: rgb(245, 245, 245);
+    width: 450px;
+    height: 600px;
+    justify-content: stretch;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+    align-self: center;
+    justify-self: center;
+    height: 85px;
+    width: 100px;
+    background-color: transparent;
+    border: 0.25px solid gray;
+    border-radius: 5px;
+    font-size: larger;
+    margin: 0;
+}
+
+.output {
+    display: flex;
+    grid-area: output;
+    flex: 1;
+    margin: 5px;
+    border: 3px solid gray;
+    height: 100px;
+    border-radius: 2px;
+    justify-content: right;
+}
+
+#clear {
+    grid-area: 5 / 1 / 7 / 2;
+    height: 175px;
+}
+
+#equal {
+    grid-area: 6 / 3 / 7 / 5;
+    width: 215px;
+}
+
+.number:hover {
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+.operand:hover {
+    background-color: rgba(127, 255, 212, 0.123);
+}
+
+#clear:hover {
+    background-color: rgba(255, 0, 0, 0.178);
+}
+
+#equal:hover {
+    background-color: rgba(0, 128, 0, 0.178);
+}
+
+#backspace:hover {
+    background-color: rgba(255, 0, 0, 0.178);
+}
+
+#decimal:hover {
+    background-color: antiquewhite;
+}
